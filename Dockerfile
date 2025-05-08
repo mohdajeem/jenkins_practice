@@ -2,8 +2,6 @@ FROM nginx:alpine
 
 RUN rm -rf /usr/share/nginx/html/*
 
-WORKDIR /data
-
-COPY . .
+COPY index.html /usr/share/nginx/html/index.html
 
 EXPOSE 8088:80
